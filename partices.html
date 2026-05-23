@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* 1. Deep Black Background */
+        body {
+            background-color: #000;
+            height: 100vh;
+            margin: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            position: relative;
+        }
+
+        /* 2. RANDOM FLASHING BLUE LINES */
+        .blue-line {
+            position: absolute;
+            background: linear-gradient(90deg, transparent, #007bff, transparent);
+            height: 2px;
+            width: 100%;
+            opacity: 0;
+            animation: randomFlash 4s infinite;
+        }
+
+        /* Position the lines randomly */
+        .line1 { top: 20%; animation-delay: 0s; }
+        .line2 { top: 50%; animation-delay: 1.5s; width: 50%; left: 10%; }
+        .line3 { top: 80%; animation-delay: 3s; }
+        .line4 { left: 30%; width: 2px; height: 100%; background: linear-gradient(180deg, transparent, #00d4ff, transparent); animation-delay: 1s; }
+
+        @keyframes randomFlash {
+            0% { opacity: 0; transform: scale(0.8); }
+            10% { opacity: 1; filter: blur(2px) brightness(2); }
+            20% { opacity: 0; }
+            100% { opacity: 0; }
+        }
+
+        /* 3. THE WHITE MEMBER BOX */
+        .login-card {
+            background-color: #ffffff;
+            border-radius: 20px;
+            padding: 40px;
+            z-index: 10; /* Keeps box above the lines */
+            box-shadow: 0 0 50px rgba(0, 123, 255, 0.3);
+            width: 100%;
+            max-width: 400px;
+        }
+
+        .form-label { color: #333; font-weight: bold; }
+        .form-control { background-color: #f8f9fa; border: 1px solid #ddd; }
+        
+        h4 { color: #000; font-weight: 900; letter-spacing: 1px; }
+    </style>
+</head>
+<body>
+
+    <div class="blue-line line1"></div>
+    <div class="blue-line line2"></div>
+    <div class="blue-line line3"></div>
+    <div class="blue-line line4"></div>
+
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="login-card shadow-lg">
+                
+                <h4 class="text-center mb-4">MEMBER LOGIN</h4>
+
+                <form>
+                    <div class="mb-4">
+                        <label class="form-label">Username</label>
+                        <input type="text" class="form-control" placeholder="Type here...">
+                    </div>
+
+                    <div class="mb-4">
+                        <label class="form-label">Password</label>
+                        <input type="password" class="form-control" placeholder="••••••••">
+                    </div>
+
+                    <button type="submit" class="btn btn-outline-primary w-100 fw-bold py-2">
+                        LOGIN
+                    </button>
+                </form>
+
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

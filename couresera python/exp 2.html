@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Modern CSS Showcase</title>
+  
+  <style>
+    /* Glossy dark green background */
+    body {
+      margin: 0;
+      min-height: 100vh;
+      background-image: linear-gradient(135deg, rgba(10, 35, 20, 0.95) 0%, rgba(7, 58, 32, 0.92) 60%, rgba(2, 36, 18, 0.95) 100%),
+                        url('https://www.transparenttextures.com/patterns/cubes.png');
+      background-size: cover;
+      background-blend-mode: overlay;
+      background-position: center;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      color: #e8eef6;
+    }
+
+    header {
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 42px;
+      letter-spacing: 1.2px;
+      margin: 0;
+      color: #f4f9ff;
+      text-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+    }
+
+    header p {
+      margin-top: 12px;
+      font-size: 18px;
+      color: rgba(244, 249, 255, 0.9);
+    }
+
+    .card {
+      position: relative;
+      background: rgba(255, 255, 255, 0.12);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      border-radius: 18px;
+      box-shadow: 0 16px 40px rgba(0, 0, 0, 0.45);
+      max-width: 520px;
+      margin: 50px auto;
+      padding: 32px 28px;
+      text-align: center;
+      backdrop-filter: blur(14px);
+      overflow: hidden;
+    }
+
+    .card::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, rgba(255, 255, 255, 0.35) 0%, rgba(255, 255, 255, 0) 70%);
+      transform: translateY(-50%) rotate(-10deg);
+      filter: blur(18px);
+      opacity: 0.7;
+      pointer-events: none;
+    }
+
+    .card img {
+      width: 120px;
+      height: 120px;
+      border-radius: 18px;
+      border: 2px solid rgba(255, 255, 255, 0.35);
+      box-shadow: 0 10px 26px rgba(0, 0, 0, 0.4);
+      margin-bottom: 22px;
+    }
+
+    .card h2 {
+      font-size: 26px;
+      margin: 0 0 14px;
+      color: #a8d3ff;
+    }
+
+    .card p {
+      font-size: 16px;
+      line-height: 1.6;
+      color: rgba(232, 238, 246, 0.9);
+      margin: 0;
+    }
+
+    .highlight {
+      color: #76ffb2;
+      font-weight: 600;
+      text-shadow: 0 0 8px rgba(118, 255, 178, 0.7);
+    }
+
+    footer {
+      text-align: center;
+      padding: 18px 10px 26px;
+      font-size: 14px;
+      color: rgba(232, 238, 246, 0.7);
+    }
+
+    footer a {
+      color: rgba(255, 255, 255, 0.85);
+      text-decoration: none;
+      border-bottom: 1px dashed rgba(255, 255, 255, 0.4);
+    }
+
+    footer a:hover {
+      color: #ffffff;
+      border-bottom-color: rgba(255, 255, 255, 0.8);
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>Modern CSS Showcase</h1>
+    <p>Learn about the latest CSS features and techniques.</p>
+  </header>
+
+  <div class="card">
+    <img src="https://cdn-icons-png.flaticon.com/512/139/139899.png" alt="Design icon">
+    <h2>Built with <span class="highlight">CSS3</span> features</h2>
+    <p>
+      This page demonstrates <span class="highlight">glassmorphism</span>, <span class="highlight">blurred backgrounds</span>,
+      and <span class="highlight">modern typography</span> using pure CSS.
+    </p>
+  </div>
+
+  <footer>
+    <p>&copy; 2026 — Crafted for learning and experimentation. Visit <a href="#">our docs</a>.</p>
+  </footer>
+</body>
+</html>
